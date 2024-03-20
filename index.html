@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Assets/ballot.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Polling App</h1>
+
+        <h2>Voting Results</h2>
+        <div id="votingResults">
+            <!-- Display voting results here -->
+        </div>
+        <h2>Polling Table</h2>
+        <form id="pollingForm">
+            <input type="text" id="PartyName" name="partyName" placeholder="Party Name" maxlength="100" required><br>
+            <input type="text" id="EvId" name="EVId" placeholder="EV ID" maxlength="50" required><br>
+            <input type="text" id="VotingId" name="voting ID" placeholder="voting ID" maxlength="50" required><br>
+            <input type="date" id="Polled on" name="Polled on" required><br><br>
+            <input type="submit" value="Vote">
+        </form>
+
+        <h2>Party Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="partyName" name="partyName" placeholder="Party Name" maxlength="100" required><br>
+            <input type="text" id="partyId" name="Party ID" placeholder="Party ID" maxlength="50" required><br>
+            <input type="text" id="partyImage" name="partyImage" placeholder="Party Image URL" required><br>
+            <input type="date" id="Created on" name="Created on" required><br><br>
+            <input type="submit" value="Register Party">
+        </form>
+
+        <h2>Party List</h2>
+        <form id="votingForm">
+            <select id="party" name="party" title="party">
+            </select><br><br>            
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
