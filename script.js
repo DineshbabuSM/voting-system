@@ -1,5 +1,5 @@
 const fetchPollingResult = async () => {
-  const response = await fetch("http://localhost:3000/polling/pollingResult");
+  const response = await fetch("https://voting-system-back-end.onrender.com/polling/pollingResult");
   const data = await response.json();
   displayResults(data);
   populatePartyOptions();
@@ -23,7 +23,7 @@ function displayResults(results) {
 // Populate party options for voting form
 async function populatePartyOptions() {
 
-    const partyList = await fetch("http://localhost:3000/partyList/party");
+    const partyList = await fetch("https://voting-system-back-end.onrender.com/partyList/party");
     const results = await partyList.json();
     
     const select = document.getElementById("party");
@@ -50,7 +50,7 @@ document.getElementById("registrationForm").addEventListener("submit", function 
       PartyImage: partyImage,
     };
 
-    fetch("http://localhost:3000/partyList/partyRegister", {
+    fetch("https://voting-system-back-end.onrender.com/partyList/partyRegister", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -86,7 +86,7 @@ const postPolling = () => {
     EVId: evId,
   };
 
-  fetch("http://localhost:3000/polling", {
+  fetch("https://voting-system-back-end.onrender.com/polling", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
